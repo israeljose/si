@@ -11,7 +11,7 @@
         
         .center-div {
             margin: 0 auto;
-            max-width: 700px;
+            max-width: 800px;
             background-color: #ccc;
             border-radius: 3px;
             padding: 0.4em;
@@ -41,12 +41,28 @@
             <option value="3">Alta</option>
             <option value="4">Elevadíssima</option>
         </select>
-        <input type="button" value="Calcular" />
+        <input type="button" value="Calcular" onclick="calculaRisco()"/>
         <!-- Referencias:
             https://www.w3schools.com/html/html_form_input_types.asp
         
         -->
     </div>
+    <script>
+        var tabela =[
+            [0,0,0,0,1],
+            [0,0,1,0,1],
+            [],
+            [],
+            []
+
+        ]
+
+
+        function calculaRisco() {
+            //alert(tabela[0][4]);
+        }
+    
+    </script>
 </body>
 
 </html>
