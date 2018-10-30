@@ -25,8 +25,8 @@
         de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média, alta, elevadíssima.<br>
 
         <br> Descrição
-        <input type="text" name="descricao"> Impacto
-        <select name="impacto">
+        <input type="text" id="descricao"> Impacto
+        <select id="impacto">
             <option value="0">Insignificante</option>
             <option value="1">Baixo</option>
             <option value="2">Médio</option>
@@ -34,7 +34,7 @@
             <option value="4">Trágico</option>
         </select> Probabilidade
 
-        <select name="probabilidade">
+        <select id="probabilidade">
             <option value="0">Remota</option>
             <option value="1">Baixa</option>
             <option value="2">Média</option>
@@ -54,12 +54,19 @@
             [0, 1, 1, 1, 2],
             [0, 1, 2, 1, 2],
             [1, 2, 2, 1, 2]
-
         ]
 
 
         function calculaRisco() {
             //alert(tabela[0][4]);
+            var imp = parseInt(document.getElementById("impacto").value); //impacto
+            var pro = parseInt(document.getElementById("probabilidade").value); //probabilidade
+            //alert(tabela[pro][imp]);
+            var risco = tabela[pro][imp];
+            if(risco==0){
+                alert("Baixa");
+            }
+            
         }
     </script>
 </body>
