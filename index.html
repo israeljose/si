@@ -41,19 +41,19 @@
             <option value="3">Alta</option>
             <option value="4">Elevadíssima</option>
         </select>
-        <input type="button" value="Calcular" onclick="calculaRisco()"/>
+        <input type="button" value="Calcular" onclick="calculaRisco()" />
         <!-- Referencias:
             https://www.w3schools.com/html/html_form_input_types.asp
         
         -->
     </div>
     <script>
-        var tabela =[
-            [0,0,0,0,1],
-            [0,0,1,0,1],
-            [],
-            [],
-            []
+        var tabela = [
+            [0, 0, 0, 0, 1],
+            [0, 0, 1, 0, 1],
+            [0, 1, 1, 1, 2],
+            [0, 1, 2, 1, 2],
+            [1, 2, 2, 1, 2]
 
         ]
 
@@ -61,7 +61,6 @@
         function calculaRisco() {
             //alert(tabela[0][4]);
         }
-    
     </script>
 </body>
 
