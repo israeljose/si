@@ -22,18 +22,26 @@
 <body>
     <div class="center-div">
         <h1>sistema de informação</h1><br> Este programa faz o calculo da analise do risco, dada a tabela vista em sala de aula, associado aos fatores de impacto e probabilidade do risco. Dados de entrada: nome do risco, impacto, probabilidade. <br> Tipos
-        de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média, alta, elevadissima.<br>
+        de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média, alta, elevadíssima.<br>
 
-        <br>
-        Descrição<input type="text" name="descricao">
-        Impacto<select name="impacto">
+        <br> Descrição
+        <input type="text" name="descricao"> Impacto
+        <select name="impacto">
             <option value="0">Insignificante</option>
             <option value="1">Baixo</option>
             <option value="2">Médio</option>
             <option value="3">Alto</option>
+            <option value="4">Trágico</option>
+        </select> Probabilidade
+
+        <select name="probabilidade">
+            <option value="0">Remota</option>
+            <option value="1">Baixa</option>
+            <option value="2">Média</option>
+            <option value="3">Alta</option>
+            <option value="4">Elevadíssima</option>
         </select>
-
-
+        <input type="button" value="Calcular" />
         <!-- Referencias:
             https://www.w3schools.com/html/html_form_input_types.asp
         
