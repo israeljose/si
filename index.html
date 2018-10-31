@@ -51,9 +51,9 @@
         var tabela = [
             [0, 0, 0, 0, 1],
             [0, 0, 1, 0, 1],
-            [0, 1, 1, 1, 2],
-            [0, 1, 2, 1, 2],
-            [1, 2, 2, 1, 2]
+            [0, 1, 1, 2, 2],
+            [0, 1, 2, 2, 2],
+            [1, 2, 2, 2, 2]
         ]
 
 
@@ -63,10 +63,17 @@
             var pro = parseInt(document.getElementById("probabilidade").value); //probabilidade
             //alert(tabela[pro][imp]);
             var risco = tabela[pro][imp];
-            if(risco==0){
+            if (risco == 0) {
                 alert("Baixa");
             }
-            
+
+            if (risco == 1) {
+                alert("Médio");
+            }
+
+            if (risco == 2) {
+                alert("Alto");
+            }
         }
     </script>
 </body>
