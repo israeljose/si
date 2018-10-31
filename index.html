@@ -21,11 +21,8 @@
 
 <body>
     <div class="center-div">
-        <h1>sistema de informação</h1><br> Este programa faz o calculo da analise do risco, dada a tabela vista em sala
-        de aula, associado aos fatores de impacto e probabilidade do risco. Dados de entrada: nome do risco, impacto,
-        probabilidade. <br> Tipos
-        de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média,
-        alta, elevadíssima.<br>
+        <h1>sistema de informação</h1><br> Este programa faz o calculo da analise do risco, dada a tabela vista em sala de aula, associado aos fatores de impacto e probabilidade do risco. Dados de entrada: nome do risco, impacto, probabilidade. <br> Tipos
+        de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média, alta, elevadíssima.<br>
 
         <br> Descrição
         <input type="text" id="descricao"> Impacto
@@ -104,6 +101,30 @@
                     break;
                 case 2:
                     probabilidade = "Média";
+                    break;
+                case 3:
+                    probabilidade = "Alta";
+                    break;
+                case 4:
+                    probabilidade = "Elevadíssima";
+                    break;
+            }
+
+            switch (imp) {
+                case 0:
+                    impacto = "Insignificante";
+                    break;
+                case 1:
+                    impacto = "Baixo";
+                    break;
+                case 2:
+                    impacto = "Médio";
+                    break;
+                case 3:
+                    impacto = "Alto";
+                    break;
+                case 4:
+                    impacto = "Trágico";
                     break;
             }
             alert(risco);
