@@ -21,8 +21,11 @@
 
 <body>
     <div class="center-div">
-        <h1>sistema de informação</h1><br> Este programa faz o calculo da analise do risco, dada a tabela vista em sala de aula, associado aos fatores de impacto e probabilidade do risco. Dados de entrada: nome do risco, impacto, probabilidade. <br> Tipos
-        de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média, alta, elevadíssima.<br>
+        <h1>sistema de informação</h1><br> Este programa faz o calculo da analise do risco, dada a tabela vista em sala
+        de aula, associado aos fatores de impacto e probabilidade do risco. Dados de entrada: nome do risco, impacto,
+        probabilidade. <br> Tipos
+        de Impacto: Insignificante, baixo, médio, alto e trágico. <br> Tipos de Probabilidade: Remota, baixa, média,
+        alta, elevadíssima.<br>
 
         <br> Descrição
         <input type="text" id="descricao"> Impacto
@@ -42,12 +45,16 @@
             <option value="4">Elevadíssima</option>
         </select>
         <input type="button" value="Calcular" onclick="calculaRisco()" />
+
+        <div id="resultados"></div>
         <!-- Referencias:
             https://www.w3schools.com/html/html_form_input_types.asp
         
         -->
     </div>
     <script>
+        var lista = []
+
         var tabela = [
             [0, 0, 0, 0, 1],
             [0, 0, 1, 0, 1],
@@ -62,18 +69,44 @@
             var imp = parseInt(document.getElementById("impacto").value); //impacto
             var pro = parseInt(document.getElementById("probabilidade").value); //probabilidade
             //alert(tabela[pro][imp]);
-            var risco = tabela[pro][imp];
-            if (risco == 0) {
-                alert("Baixa");
+            var risco;
+            var probabilidade;
+            var impacto;
+            // if (risco == 0) {
+            //     alert("Baixa");
+            // }
+
+            // if (risco == 1) {
+            //     alert("Médio");
+            // }
+
+            // if (risco == 2) {
+            //     alert("Alto");
+            // }
+            switch (tabela[pro][imp]) {
+                case 0:
+                    risco = "Baixo";
+                    break;
+                case 1:
+                    risco = "Médio";
+                    break;
+                case 2:
+                    risco = "Alto";
+                    break;
             }
 
-            if (risco == 1) {
-                alert("Médio");
+            switch (pro) {
+                case 0:
+                    probabilidade = "Remota";
+                    break;
+                case 1:
+                    probabilidade = "Baixa";
+                    break;
+                case 2:
+                    probabilidade = "Média";
+                    break;
             }
-
-            if (risco == 2) {
-                alert("Alto");
-            }
+            alert(risco);
         }
     </script>
 </body>
